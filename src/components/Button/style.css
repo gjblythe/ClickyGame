@@ -1,4 +1,22 @@
 button{
-    margin: 1%;
+    margin: 1% 1% 1%;
     height: 110px;
+}
+
+@media only screen and (max-width: 460px) {
+    button {
+        margin-left: 8%;
+    }
+}
+@media only screen and (max-width: 414px) {
+    button {
+        margin-left: 6%;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    button {
+        margin-left: 5%;
+        width: 90%;
+    }
 }

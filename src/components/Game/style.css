@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1080px) {
+    .col{
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .col{
+        margin-left: 0%;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .col{
+        margin-left: 0%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .col{
+        margin-left: 0%;
+    }
+}

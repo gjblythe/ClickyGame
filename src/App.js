@@ -3,6 +3,7 @@ import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
 import Image from "./components/Images";
 import Button from "./components/Button";
+import Game from  "./components/Game";
 import pixel from "./Pixel.json";
 
 class App extends React.Component {
@@ -64,6 +65,9 @@ componentDidMount() {
      score={this.state.score}
      record={this.state.record}
      />
+     
+      
+     <Game>
      {this.state.pixel.map(char => (
     <Button key={char.id} onClick={this.clickedFunction}>
      <Image
@@ -75,7 +79,7 @@ componentDidMount() {
      />
      </Button>
      ))}
-    
+    </Game>
    </Wrapper>
     );
   }
