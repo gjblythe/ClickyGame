@@ -1,5 +1,5 @@
-.card {
-    max-width:25%;
-    margin: 5%;
-    max-height: 25%;
+#pixel {
+    padding: 1%;
+    max-width: 100px;
+    max-height: 100px;
 }
