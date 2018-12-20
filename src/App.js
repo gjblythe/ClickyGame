@@ -11,29 +11,30 @@ class App extends React.Component {
   state ={
     title: "Clicky Game",
     pixel,
-    picked: "",
+    name: "",
     score: 0,
     record: 0
   }
-
+//ask for help
   //this sets state of clicked to true to help evaluate not currently working 
   clickedFunction = () => {
-    this.setState({ picked: this.pixel.name})
-    console.log(this.state.picked)
-    this.setState({ score: this.state.score + 1 });
+    // this.setState({ score: this.state.score + 1 });
 
      if (this.state.score > this.state.record)
      {
        this.setState({ record: this.state.score})
      };
 
-     if (this.state.clicked === true)
-     {
-      this.setState({ score: 0 })
-     };
-    this.shuffleFunction();
+    //  if (this.state.clicked === true)
+    //  {
+    //   this.setState({ score: 0 })
+    //  };
+
   }
 
+
+
+  //this makes a random array
   shuffleFunction = () => {
     var input = pixel;
      
@@ -53,9 +54,16 @@ componentDidMount() {
   this.shuffleFunction();
 }
 
-  // winChecker = () => {
-  //   if ()
-  // }
+//where the magic happens
+testClick = (id) => {
+  this.setState({ score: this.state.score + 1, name: this.state.name});
+  console.log(this.state.name);
+  if (this.state.score > this.state.record)
+  {
+    this.setState({ record: this.state.score})
+  };
+  this.shuffleFunction();
+}
 
   render() {
     return (
@@ -69,8 +77,8 @@ componentDidMount() {
       
      <Game>
      {this.state.pixel.map(char => (
-    <Button key={char.id} onClick={this.clickedFunction}>
-     <Image
+       <Button testClick={this.testClick}>
+       <Image
      key={char.id}
      name={char.name}
      src={char.src}
